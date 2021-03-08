@@ -2,8 +2,8 @@
   "name": "moonstonks-boersenapi",
   "version": "1.0.2",
   "author": "Timo Scheuermann",
-  "description": "TODO:",
-  "main": "./dist/main.js",
+  "description": "Offizielle API der MoonStonks Börse, um jegliche Art von Order zu stellen.",
+  "main": "./dist/BörsenAPI.js",
   "scripts": {
     "build": "rimraf dist && tsc",
     "lint": "eslint \"**\\*.ts\"",
