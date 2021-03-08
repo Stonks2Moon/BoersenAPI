@@ -16,6 +16,14 @@ export class OrderManager {
     return RequestManager.get('order/' + orderId, this.api.token);
   }
 
+  public async deleteOrder(orderId: string): Promise<boolean> {
+    return RequestManager.delete('order', this.api.token, { orderId });
+  }
+
+  public async deleteJob(jobId: string): Promise<boolean> {
+    return RequestManager.delete('order', this.api.token, { jobId });
+  }
+
   public async placeBuyMarketOrder(
     shareId: string,
     amount: number
