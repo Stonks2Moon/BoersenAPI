@@ -151,6 +151,8 @@ ___
 |:--|:--|:--|
 id|string|TODO:|
 name|string|TODO:|
+color|string|TODO:|
+thumbnail|string|TODO:|
 price|string|TODO:|
 
 ___
