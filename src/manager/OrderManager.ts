@@ -1,4 +1,5 @@
 import { BörsenAPI } from '../BörsenAPI';
+import { PlaceOrderDto } from '../dtos/PlaceOrder.dto';
 import { Job } from '../models/Job.model';
 import { Order } from '../models/Order.model';
 import { RequestManager } from './RequestManager';
@@ -111,6 +112,6 @@ export class OrderManager {
       limit: limit,
       stop: stop,
       stopLimit: stopLimit,
-    });
+    } as PlaceOrderDto);
   }
 }

@@ -3,7 +3,8 @@ export { BörsenAPI } from './BörsenAPI';
 //
 // _______________________________________________________________
 // Manager
-// export { OrderManager } from './manager/OrderManager';
+export { MarketManager } from './manager/MarketManager';
+export { OrderManager } from './manager/OrderManager';
 export { ShareManager } from './manager/ShareManager';
 //
 // _______________________________________________________________
