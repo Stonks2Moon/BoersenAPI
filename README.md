@@ -120,6 +120,37 @@ ShareManager.getPricesUntil("shareId", until);
 ShareManager.getPricesFromUntil("shareId", from, until);
 ```
 
+## Market
+
+```ts
+import { MarketManager } from "moonstonks-api"
+```
+
+### Prüfen, ob der Market gerade geöffnet ist
+> ```ts
+> async static function isOpen(): Promise<boolean>
+> ```
+```ts
+MarketManager.isOpen();
+```
+
+### Prüfen, ob der Market gerade geschlossen ist
+
+> ```ts
+> async function isClosed(): Promise<boolean>
+> ```
+```ts
+MarketManager.isClosed();
+```
+
+### Den aktuellen Status des Markets abrufen
+> ```ts
+> async static function getStatus(): Promise<string>
+> ```
+```ts
+MarketManager.getStatus();
+```
+
 # Datenmodelle
 
 ## Order
