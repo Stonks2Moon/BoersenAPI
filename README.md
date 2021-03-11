@@ -179,14 +179,14 @@ price|number|Höhe des aktuellen Preises|
 |:--|:--|:--|
 |shareId|string|Id des gewählten Shares|
 |amount|number|Menge der zu handelnden Shares dieser Order|
-|onPlace|string|TODO:|
-|onMatch|string|TODO:|
-|onComplete|string|TODO:|
-|onDelete|string|TODO:|
+|onPlace|string|von Broker aufgeruferner Endpunkt, wenn Order platziert wird|
+|onMatch|string|von Broker aufgerufener Endpunkt, wenn Order gematcht wird|
+|onComplete|string|von Broker aufgerufener Endpunkt, wenn Order ausgeführt|
+|onDelete|string|von Broker aufgerufener Endpunkt, wenn Order gelöscht wird|
 |type|'buy' \| 'sell'|Ordertyp: Kauf- oder Verkaufsorder|
-|limit|number|Limit zu dem man diese Order ausführen möchte|
-|stop|number|Grenze der Stop-Market Order|
-|stopLimit|number|Grenze der Stop-Limit Order|
+|limit?|number|Limit zu dem man diese Order ausführen möchte, wenn leer = Marketorder|
+|stop?|number|Grenze der Order|
+|stopLimit?|number|Neues Limit der Order|
 
 ## UnqueueJobDto
 
