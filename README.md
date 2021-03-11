@@ -179,10 +179,10 @@ price|number|Höhe des aktuellen Preises|
 |:--|:--|:--|
 |shareId|string|Id des gewählten Shares|
 |amount|number|Menge der zu handelnden Shares dieser Order|
-|onPlace|string|von Broker aufgeruferner Endpunkt, wenn Order platziert wird|
-|onMatch|string|von Broker aufgerufener Endpunkt, wenn Order gematcht wird|
-|onComplete|string|von Broker aufgerufener Endpunkt, wenn Order ausgeführt|
-|onDelete|string|von Broker aufgerufener Endpunkt, wenn Order gelöscht wird|
+|onPlace|string|aufgerufener Endpunkt vom Broker, wenn Order platziert wird|
+|onMatch|string|aufgerufener Endpunkt vom Broker, wenn Order gematcht wird|
+|onComplete|string|aufgerufener Endpunkt vom Brokert, wenn Order ausgeführt|
+|onDelete|string|aufgerufener Endpunkt vom Broker, wenn Order gelöscht wird|
 |type|'buy' \| 'sell'|Ordertyp: Kauf- oder Verkaufsorder|
 |limit?|number|Limit zu dem man diese Order ausführen möchte, wenn leer = Marketorder|
 |stop?|number|Grenze der Order|
