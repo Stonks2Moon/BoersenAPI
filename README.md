@@ -126,22 +126,22 @@ ShareManager.getPricesFromUntil("shareId", from, until);
 
 | Attribut | Type | Beschreibung |
 |:--|:--|:--|
-|id|string|TODO:|
-|shareId|string|TODO:|
-|timestamp|number|TODO:|
-|type|"buy" \| "sell"|TODO:|
-|amount|number|TODO:|
-|limit?|number|TODO:|
-|stop?|number|TODO:|
-|stopLimit?|number|TODO:|
+|id|string|eindeutige Order ID|
+|shareId|string|ID des gewählten Shares|
+|timestamp|number|Zeitstempel des Stellens der Order|
+|type|"buy" \| "sell"|Ordertyp: Kauf- oder Verkaufsorder|
+|amount|number|Menge der zu kaufenden/verkaufenden Shares|
+|limit?|number|Limit zu dem man diese Order ausführen möchte; Wenn leer = Marketorder|
+|stop?|number|Grenze der Stop-Market Order|
+|stopLimit?|number|Grenze der Stop-Limit Order|
 
 ___
 ## Job
 
 | Attribut | Type | Beschreibung |
 |:--|:--|:--|
-|id|string|TODO:|
-|data| { dto: PlaceOrderDto \| DeleteOrderDto, broker: Broker }|TODO:|
+|id|string|eindeutige Job ID|
+|data| { dto: PlaceOrderDto \| DeleteOrderDto, broker: Broker }|Bündel der Daten für Platzieren oder Löschen der Daten|
 
 ___
 
@@ -149,26 +149,26 @@ ___
 
 | Attribut | Type | Beschreibung |
 |:--|:--|:--|
-id|string|TODO:|
-name|string|TODO:|
-color|string|TODO:|
-thumbnail|string|TODO:|
-price|string|TODO:|
+id|string|eindeutige Share ID|
+name|string|Name des Shares|
+color|string|Farbe zur Identifikation des Shares|
+thumbnail|string|Bild/Grafik zur Identifikation des Shares|
+price|string|aktueller Preis des Shares|
 
 ___
 ## Price
 
 | Attribut | Type | Beschreibung |
 |:--|:--|:--|
-timestamp|number|TODO:|
-price|number|TODO:|
+timestamp|number|Zeitstempel des aktuellen Preises|
+price|number|Höhe des aktuellen Preises|
   ___
 ## Broker
 
 | Attribut | Type | Beschreibung |
 |:--|:--|:--|
-|type|'private' \| 'business' \| 'simulation' \| 'stockmarket'|TODO:|
-|displayName|string|TODO:|
+|type|'private' \| 'business' \| 'simulation' \| 'stockmarket'|Art des Brokers|
+|displayName|string|Anzeigename des Brokers|
 
 
 # DTOs
@@ -177,29 +177,29 @@ price|number|TODO:|
 
 | Attribut | Type | Beschreibung |
 |:--|:--|:--|
-|shareId|string|TODO:|
-|amount|number|TODO:|
+|shareId|string|Id des gewählten Shares|
+|amount|number|Menge der zu handelnden Shares dieser Order|
 |onPlace|string|TODO:|
 |onMatch|string|TODO:|
 |onComplete|string|TODO:|
 |onDelete|string|TODO:|
-|type|'buy' \| 'sell'|TODO:|
-|limit|number|TODO:|
-|stop|number|TODO:|
-|stopLimit|number|TODO:|
+|type|'buy' \| 'sell'|Ordertyp: Kauf- oder Verkaufsorder|
+|limit|number|Limit zu dem man diese Order ausführen möchte|
+|stop|number|Grenze der Stop-Market Order|
+|stopLimit|number|Grenze der Stop-Limit Order|
 
 ## UnqueueJobDto
 
 | Attribut | Type | Beschreibung |
 |:--|:--|:--|
-|jobId|string|TODO:|
+|jobId|string|eindeutige Job ID|
 
 ___
 ## DeleteOrderDto
 
 | Attribut | Type | Beschreibung |
 |:--|:--|:--|
-|orderId|string|TODO:|
+|orderId|string|eindeutige Order ID|
 
 ___
 
