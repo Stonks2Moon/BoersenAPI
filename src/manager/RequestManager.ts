@@ -36,6 +36,14 @@ export class RequestManager {
     });
   }
 
+  public static _get(url: string): Promise<string> {
+    return new Promise((resolve, reject) => {
+      fetch(backendUrl + url)
+        .then((res: Response) => resolve(res.text()))
+        .catch(reject);
+    });
+  }
+
   public static async post(
     url: string,
     token: string,
