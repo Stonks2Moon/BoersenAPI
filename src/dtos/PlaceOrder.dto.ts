@@ -11,5 +11,4 @@ export class PlaceOrderDto {
 
   limit?: number;
   stop?: number;
-  stopLimit?: number;
 }

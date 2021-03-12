@@ -8,5 +8,4 @@ export class Order {
 
   limit?: number;
   stop?: number;
-  stopLimit?: number;
 }

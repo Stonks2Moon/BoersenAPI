@@ -43,20 +43,18 @@ export class OrderManager {
   public async placeBuyStopMarketOrder(
     shareId: string,
     amount: number,
-    limit: number,
     stop: number
   ): Promise<Job> {
-    return this.placeOrder('buy', shareId, amount, limit, stop);
+    return this.placeOrder('buy', shareId, amount, 0, stop);
   }
 
   public async placeBuyStopLimitOrder(
     shareId: string,
     amount: number,
     limit: number,
-    stop: number,
-    stopLimit: number
+    stop: number
   ): Promise<Job> {
-    return this.placeOrder('buy', shareId, amount, limit, stop, stopLimit);
+    return this.placeOrder('buy', shareId, amount, limit, stop);
   }
 
   public async placeSellMarketOrder(
@@ -77,20 +75,18 @@ export class OrderManager {
   public async placeSellStopMarketOrder(
     shareId: string,
     amount: number,
-    limit: number,
     stop: number
   ): Promise<Job> {
-    return this.placeOrder('sell', shareId, amount, limit, stop);
+    return this.placeOrder('sell', shareId, amount, 0, stop);
   }
 
   public async placeSellStopLimitOrder(
     shareId: string,
     amount: number,
     limit: number,
-    stop: number,
-    stopLimit: number
+    stop: number
   ): Promise<Job> {
-    return this.placeOrder('sell', shareId, amount, limit, stop, stopLimit);
+    return this.placeOrder('sell', shareId, amount, limit, stop);
   }
 
   public async placeOrder(
@@ -98,8 +94,7 @@ export class OrderManager {
     shareId: string,
     amount: number,
     limit?: number,
-    stop?: number,
-    stopLimit?: number
+    stop?: number
   ): Promise<Job> {
     return RequestManager.post('order', this.api.token, {
       amount: amount,
@@ -111,7 +106,6 @@ export class OrderManager {
       type: type,
       limit: limit,
       stop: stop,
-      stopLimit: stopLimit,
     } as PlaceOrderDto);
   }
 }

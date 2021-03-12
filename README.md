@@ -52,20 +52,30 @@ orderManager.placeBuyLimitOrder("shareId", 20, 200)
 ```
 
 ### Eine Buy Stop Market Order stellen
+> ```ts
+> async function placeBuyStopMarketOrder(shareId: string, amount: number, stop: number): Promise<Job>
+> ```
 ```ts
-orderManager.placeBuyStopMarketOrder("shareId", 20, 200, 250)
+orderManager.placeBuyStopMarketOrder("shareId", 20, 200, 300)
   .then((job) => console.log('Job', job))
   .catch((error) => console.error(error));
 ```
 
 ### Eine Buy Stop Limit Order stellen
+> ```ts
+> async function placeBuyStopLimitOrder(shareId: string, amount: number, limit: number, stop: number): Promise<Job>
+> ```
 ```ts
-orderManager.placeBuyStopLimitOrder("shareId", 20, 200, 250, 260)
+orderManager.placeBuyStopLimitOrder("shareId", 20, 200, 350, 300)
   .then((job) => console.log('Job', job))
   .catch((error) => console.error(error));
 ```
 
 ### Eine Sell Market Order stellen
+
+> ```ts
+> async function placeSellMarketOrder(shareId: string, amount: number): Promise<Job>
+> ```
 ```ts
 orderManager.placeSellMarketOrder("shareId", 20)
   .then((job) => console.log('Job', job))
@@ -73,25 +83,35 @@ orderManager.placeSellMarketOrder("shareId", 20)
 ```
 
 ### Eine Sell Limit Order stellen
+> ```ts
+> async function placeSellLimitOrder(shareId: string, amount: number, limit: number): Promise<Job>
+> ```
 ```ts
-orderManager.placeSellLimitOrder("shareId", 20, 210)
+orderManager.placeSellLimitOrder("shareId", 20, 200)
   .then((job) => console.log('Job', job))
   .catch((error) => console.error(error));
 ```
 
 ### Eine Sell Stop Market Order stellen
+> ```ts
+> async function placeSellStopMarketOrder(shareId: string, amount: number, stop: number): Promise<Job>
+> ```
 ```ts
-orderManager.placeSellStopMarketOrder("shareId", 20, 210, 150)
+orderManager.placeSellStopMarketOrder("shareId", 20, 200, 300)
   .then((job) => console.log('Job', job))
   .catch((error) => console.error(error));
 ```
 
 ### Eine Sell Stop Limit Order stellen
+> ```ts
+> async function placeSellStopLimitOrder(shareId: string, amount: number, limit: number, stop: number): Promise<Job>
+> ```
 ```ts
-orderManager.placeSellStopLimitOrder("shareId", 20, 210, 150, 140)
+orderManager.placeSellStopLimitOrder("shareId", 20, 200, 350, 300)
   .then((job) => console.log('Job', job))
   .catch((error) => console.error(error));
 ```
+
 
 ## Shares
 
@@ -103,16 +123,26 @@ import { ShareManager } from "moonstonks-boersenapi";
 
 ### Alle handelbaren Items abrufen
 
+> ```ts
+> static async function getShares(): Promise<Share[]>
+> ```
 ```ts
 ShareManager.getShares();
 ```
 
 ### Den aktuellen Kurs eines items erhalten
+
+> ```ts
+> static async function getPrice(shareId: string): Promise<number>
+> ```
 ```ts
 ShareManager.getPrice("shareId");
 ```
 
 ### Die Preisentwicklung abrufen
+> ```ts
+> static async function getPrices(shareId: string): Promise<Price[]>
+> ```
 ```ts
 ShareManager.getPrices("shareId");
 ShareManager.getPricesFrom("shareId", from);
@@ -164,7 +194,6 @@ MarketManager.getStatus();
 |amount|number|Menge der zu kaufenden/verkaufenden Shares|
 |limit?|number|Limit zu dem man diese Order ausführen möchte; Wenn leer = Marketorder|
 |stop?|number|Grenze der Stop-Market Order|
-|stopLimit?|number|Grenze der Stop-Limit Order|
 
 ___
 ## Job
@@ -201,7 +230,6 @@ price|number|Höhe des aktuellen Preises|
 |type|'private' \| 'business' \| 'simulation' \| 'stockmarket'|Art des Brokers|
 |displayName|string|Anzeigename des Brokers|
 
-
 # DTOs
 
 ## PlaceOrderDto
@@ -217,7 +245,6 @@ price|number|Höhe des aktuellen Preises|
 |type|'buy' \| 'sell'|Ordertyp: Kauf- oder Verkaufsorder|
 |limit?|number|Limit zu dem man diese Order ausführen möchte, wenn leer = Marketorder|
 |stop?|number|Grenze der Order|
-|stopLimit?|number|Neues Limit der Order|
 
 ## UnqueueJobDto
 
