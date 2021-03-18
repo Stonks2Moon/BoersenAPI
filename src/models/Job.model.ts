@@ -4,8 +4,8 @@ import { Broker } from './Broker.model';
 
 export class Job {
   id!: string;
-  data!: {
-    dto: PlaceOrderDto | DeleteOrderDto;
-    broker: Broker;
-  };
+  broker?: Broker;
+  placeOrder?: PlaceOrderDto;
+  deleteOrder?: DeleteOrderDto;
+  triggerId?: string;
 }

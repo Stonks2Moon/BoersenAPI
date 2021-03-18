@@ -158,7 +158,7 @@ import { MarketManager } from "moonstonks-api"
 
 ### Prüfen, ob der Market gerade geöffnet ist
 > ```ts
-> async static function isOpen(): Promise<boolean>
+> static async function isOpen(): Promise<boolean>
 > ```
 ```ts
 MarketManager.isOpen();
@@ -175,7 +175,7 @@ MarketManager.isClosed();
 
 ### Den aktuellen Status des Markets abrufen
 > ```ts
-> async static function getStatus(): Promise<string>
+> static async function getStatus(): Promise<string>
 > ```
 ```ts
 MarketManager.getStatus();
@@ -201,7 +201,9 @@ ___
 | Attribut | Type | Beschreibung |
 |:--|:--|:--|
 |id|string|eindeutige Job ID|
-|data| { dto: PlaceOrderDto \| DeleteOrderDto, broker: Broker }|Bündel der Daten für Platzieren oder Löschen der Daten|
+|broker|Broker|Job Owner|
+|placeOrder?|PlaceOrderDto|Bündel der Daten für das Platzieren einer Order|
+|deleteOrder?|DeleteOrderDto|Bündel der Daten für das Löschen einer Order|
 
 ___
 
