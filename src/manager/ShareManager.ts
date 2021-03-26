@@ -1,4 +1,5 @@
 import { Price } from '../models/Price.model';
+import { PriceOptions } from '../models/PriceOptions.model';
 import { Share } from '../models/Share.model';
 import { RequestManager } from './RequestManager';
 
@@ -11,31 +12,16 @@ export class ShareManager {
     return +(await RequestManager._get('share/price/' + shareId));
   }
 
-  public static async getPrices(shareId: string): Promise<Price[]> {
-    return RequestManager.get('share/prices/' + shareId);
-  }
-
-  public static async getPricesFrom(
+  public static async getPrices(
     shareId: string,
-    from: number
+    options?: PriceOptions
   ): Promise<Price[]> {
-    return RequestManager.get('share/prices/' + shareId + '?from=' + from);
-  }
+    let querie = Object.entries(options || {})
+      .map((o) => `${o[0]}=${o[1]}`)
+      .join('&');
 
-  public static async getPricesUntil(
-    shareId: string,
-    until: number
-  ): Promise<Price[]> {
-    return RequestManager.get('share/prices/' + shareId + '?until=' + until);
-  }
+    console.log('share/prices/' + shareId + '?' + querie);
 
-  public static async getPricesFromUntil(
-    shareId: string,
-    from: number,
-    until: number
-  ): Promise<Price[]> {
-    return RequestManager.get(
-      'share/prices/' + shareId + '?from=' + from + '&until=' + until
-    );
+    return RequestManager.get('share/prices/' + shareId + '?' + querie);
   }
 }
