@@ -1,1 +1,1 @@
-export const backendUrl = 'https://boerse.moonstonks.space/api/';
+export const backendUrl = 'https://boerse.moonstonks.space/';
