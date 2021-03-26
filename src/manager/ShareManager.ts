@@ -20,8 +20,6 @@ export class ShareManager {
       .map((o) => `${o[0]}=${o[1]}`)
       .join('&');
 
-    console.log('share/prices/' + shareId + '?' + querie);
-
     return RequestManager.get('share/prices/' + shareId + '?' + querie);
   }
 }
