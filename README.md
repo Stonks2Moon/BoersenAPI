@@ -35,10 +35,7 @@ public orderManager = new OrderManager(api, 'onPlace' 'onMatch', 'onComplete', '
 ### Eine Buy Market Order stellen
 
 > ```ts
-> async function placeBuyMarketOrder(
->   shareId: string,
->   amount: number
-> ): Promise<Job>;
+> async function placeBuyMarketOrder(shareId: string, amount: number): Promise<Job>;
 > ```
 
 ```ts
@@ -51,11 +48,7 @@ orderManager
 ### Eine Buy Limit Order stellen
 
 > ```ts
-> async function placeBuyLimitOrder(
->   shareId: string,
->   amount: number,
->   limit: number
-> ): Promise<Job>;
+> async function placeBuyLimitOrder(shareId: string, amount: number, limit: number): Promise<Job>;
 > ```
 
 ```ts
@@ -68,11 +61,7 @@ orderManager
 ### Eine Buy Stop Market Order stellen
 
 > ```ts
-> async function placeBuyStopMarketOrder(
->   shareId: string,
->   amount: number,
->   stop: number
-> ): Promise<Job>;
+> async function placeBuyStopMarketOrder(shareId: string, amount: number, stop: number): Promise<Job>;
 > ```
 
 ```ts
@@ -85,12 +74,7 @@ orderManager
 ### Eine Buy Stop Limit Order stellen
 
 > ```ts
-> async function placeBuyStopLimitOrder(
->   shareId: string,
->   amount: number,
->   limit: number,
->   stop: number
-> ): Promise<Job>;
+> async function placeBuyStopLimitOrder(shareId: string, amount: number, limit: number, stop: number): Promise<Job>;
 > ```
 
 ```ts
@@ -103,10 +87,7 @@ orderManager
 ### Eine Sell Market Order stellen
 
 > ```ts
-> async function placeSellMarketOrder(
->   shareId: string,
->   amount: number
-> ): Promise<Job>;
+> async function placeSellMarketOrder(shareId: string, amount: number): Promise<Job>;
 > ```
 
 ```ts
@@ -119,11 +100,7 @@ orderManager
 ### Eine Sell Limit Order stellen
 
 > ```ts
-> async function placeSellLimitOrder(
->   shareId: string,
->   amount: number,
->   limit: number
-> ): Promise<Job>;
+> async function placeSellLimitOrder(shareId: string, amount: number, limit: number): Promise<Job>;
 > ```
 
 ```ts
@@ -136,11 +113,7 @@ orderManager
 ### Eine Sell Stop Market Order stellen
 
 > ```ts
-> async function placeSellStopMarketOrder(
->   shareId: string,
->   amount: number,
->   stop: number
-> ): Promise<Job>;
+> async function placeSellStopMarketOrder(shareId: string, amount: number, stop: number): Promise<Job>;
 > ```
 
 ```ts
@@ -199,10 +172,7 @@ ShareManager.getPrice('shareId');
 ### Die Preisentwicklung abrufen
 
 > ```ts
-> async function getPrices(
->   shareId: string,
->   options?: PriceOptions
-> ): Promise<Price[]>;
+> async function getPrices(shareId: string, options?: PriceOptions): Promise<Price[]>;
 > ```
 
 ```ts
@@ -211,11 +181,7 @@ ShareManager.getPrices('shareId', { limit: 10 });
 ShareManager.getPrices('shareId', { from: 1616751375 });
 ShareManager.getPrices('shareId', { until: 1616841375 });
 ShareManager.getPrices('shareId', { from: 1616751375, until: 1616841375 });
-ShareManager.getPrices('shareId', {
-  from: 1616751375,
-  until: 1616841375,
-  limit: 10,
-});
+ShareManager.getPrices('shareId', { from: 1616751375, until: 1616841375, limit: 10 });
 ```
 
 ## Market
