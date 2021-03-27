@@ -173,10 +173,10 @@ ShareManager.getPrice('shareId');
 ```ts
 ShareManager.getPrices('shareId');
 ShareManager.getPrices('shareId', { limit: 10 });
-ShareManager.getPrices('shareId', { from: 1616751375 });
-ShareManager.getPrices('shareId', { until: 1616841375 });
-ShareManager.getPrices('shareId', { from: 1616751375, until: 1616841375 });
-ShareManager.getPrices('shareId', { from: 1616751375, until: 1616841375, limit: 10 });
+ShareManager.getPrices('shareId', { from: 1616751375000 });
+ShareManager.getPrices('shareId', { until: 1616841375000 });
+ShareManager.getPrices('shareId', { from: 1616751375000, until: 1616841375000 });
+ShareManager.getPrices('shareId', { from: 1616751375000, until: 1616841375000, limit: 10 });
 ```
 
 ## Market
