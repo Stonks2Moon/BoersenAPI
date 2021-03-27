@@ -126,12 +126,7 @@ orderManager
 ### Eine Sell Stop Limit Order stellen
 
 > ```ts
-> async function placeSellStopLimitOrder(
->   shareId: string,
->   amount: number,
->   limit: number,
->   stop: number
-> ): Promise<Job>;
+> async function placeSellStopLimitOrder(shareId: string, amount: number, limit: number, stop: number): Promise<Job>;
 > ```
 
 ```ts
