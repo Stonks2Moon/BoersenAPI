@@ -79,7 +79,7 @@ orderManager
 
 ```ts
 orderManager
-  .placeBuyStopLimitOrder('shareId', 20, 200, 350, 300)
+  .placeBuyStopLimitOrder('shareId', 20, 200, 350)
   .then((job) => console.log('Job', job))
   .catch((error) => console.error(error));
 ```
@@ -131,7 +131,7 @@ orderManager
 
 ```ts
 orderManager
-  .placeSellStopLimitOrder('shareId', 20, 200, 350, 300)
+  .placeSellStopLimitOrder('shareId', 20, 200, 350)
   .then((job) => console.log('Job', job))
   .catch((error) => console.error(error));
 ```
