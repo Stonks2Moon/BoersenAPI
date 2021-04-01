@@ -2,6 +2,13 @@
 export { BörsenAPI } from './BörsenAPI';
 //
 // _______________________________________________________________
+// DTOs
+//
+export { OrderCompletedDto } from './dtos/OrderCompleted.dto';
+export { OrderDeletedDto } from './dtos/OrderDeleted.dto';
+export { OrderMatchedDto } from './dtos/OrderMatched.dto';
+//
+// _______________________________________________________________
 // Manager
 export { MarketManager } from './manager/MarketManager';
 export { OrderManager } from './manager/OrderManager';
