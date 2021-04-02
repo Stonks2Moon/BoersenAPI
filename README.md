@@ -251,7 +251,7 @@ MarketManager.getStatus();
 | name      | string | Name des Shares                           |
 | color     | string | Farbe zur Identifikation des Shares       |
 | thumbnail | string | Bild/Grafik zur Identifikation des Shares |
-| price     | string | aktueller Preis des Shares                |
+| price     | number | aktueller Preis des Shares                |
 
 ---
 
