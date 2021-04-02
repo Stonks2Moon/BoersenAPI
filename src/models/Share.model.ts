@@ -3,5 +3,5 @@ export class Share {
   name!: string;
   color!: string;
   thumbnail!: string;
-  price!: string;
+  price!: number;
 }
