@@ -313,5 +313,36 @@ MarketManager.getStatus();
 
 ---
 
+## OrderCompletedDto
+
+| Attribut | Type   | Beschreibung        |
+| :------- | :----- | :------------------ |
+| orderId  | string | eindeutige Order ID |
+| timestamp  | number | Zeitstempel, wann die Order erfüllt wurde |
+
+---
+
+## OrderDeletedDto
+
+| Attribut | Type   | Beschreibung        |
+| :------- | :----- | :------------------ |
+| orderId  | string | eindeutige Order ID |
+| timestamp  | number | Zeitstempel, wann die Order gelöscht wurde |
+| remaining | number | Menge der übrig gebliebenen Shares |
+
+---
+
+## OrderMatchedDto
+
+| Attribut | Type   | Beschreibung        |
+| :------- | :----- | :------------------ |
+| orderId  | string | eindeutige Order ID |
+| timestamp  | number | Zeitstempel, wann die Order gematched wurde |
+| amount | number | Menge der Shares, die gematched wurden |
+| remaining | number | Menge der ürbig gebliebenen Shares nach dem Match |
+| price | number | Preis, zu dem die Order gematched wurde |
+
+---
+
 //
 TBC..
