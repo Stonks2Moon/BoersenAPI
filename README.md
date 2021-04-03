@@ -147,7 +147,7 @@ import { ShareManager } from 'moonstonks-boersenapi';
 ### Alle handelbaren Items abrufen
 
 > ```ts
-> async function getShares(): Promise<Share[]>;
+> static async function getShares(): Promise<Share[]>;
 > ```
 
 ```ts
@@ -157,7 +157,7 @@ ShareManager.getShares();
 ### Den aktuellen Kurs eines items erhalten
 
 > ```ts
-> async function getPrice(shareId: string): Promise<number>;
+> static async function getPrice(shareId: string): Promise<number>;
 > ```
 
 ```ts
@@ -167,7 +167,7 @@ ShareManager.getPrice('shareId');
 ### Die Preisentwicklung abrufen
 
 > ```ts
-> async function getPrices(shareId: string, options?: PriceOptions): Promise<Price[]>;
+> static async function getPrices(shareId: string, options?: PriceOptions): Promise<Price[]>;
 > ```
 
 ```ts
@@ -188,7 +188,7 @@ import { MarketManager } from 'moonstonks-api';
 ### Prüfen, ob der Market gerade geöffnet ist
 
 > ```ts
-> async function isOpen(): Promise<boolean>;
+> static async function isOpen(): Promise<boolean>;
 > ```
 
 ```ts
@@ -198,7 +198,7 @@ MarketManager.isOpen();
 ### Prüfen, ob der Market gerade geschlossen ist
 
 > ```ts
-> async function isClosed(): Promise<boolean>;
+> static async function isClosed(): Promise<boolean>;
 > ```
 
 ```ts
@@ -208,7 +208,7 @@ MarketManager.isClosed();
 ### Den aktuellen Status des Markets abrufen
 
 > ```ts
-> async function getStatus(): Promise<string>;
+> static async function getStatus(): Promise<string>;
 > ```
 
 ```ts
