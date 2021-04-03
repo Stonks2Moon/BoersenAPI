@@ -136,6 +136,38 @@ orderManager
   .catch((error) => console.error(error));
 ```
 
+## Eine Order verwalten
+
+### Eine Order abfragen
+
+> ```ts
+> async function getOrder(orderId: string): Promise<Order>;
+> ```
+
+```ts
+orderManager.getOrder('orderId');
+```
+
+### Eine Order löschen
+
+> ```ts
+> async function deleteOrder(orderId: string): Promise<boolean>;
+> ```
+
+```ts
+orderManager.deleteOrder('orderId');
+```
+
+### Einen Job löschen
+
+> ```ts
+> async function deleteJob(jobId: string): Promise<boolean>;
+> ```
+
+```ts
+orderManager.deleteJob('jobId');
+```
+
 ## Shares
 
 Shares sind items, welche in der MoonStonks Börse gehandelt werden können. Hierzu stellt die Börse verschiedene Methoden zur Verfügung, um Informationen wie den aktuellen Kurs, die Preisentwicklung und andere abzurufen.
