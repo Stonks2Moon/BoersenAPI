@@ -17,7 +17,7 @@ export class OrderManager {
     return RequestManager.get('order/' + orderId, this.api.token);
   }
 
-  public async deleteOrder(orderId: string): Promise<boolean> {
+  public async deleteOrder(orderId: string): Promise<Job> {
     return RequestManager.delete('order', this.api.token, { orderId });
   }
 
