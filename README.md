@@ -145,17 +145,23 @@ orderManager
 > ```
 
 ```ts
-orderManager.getOrder('orderId');
+orderManager
+  .getOrder('orderId')
+  .then((order) => console.log('Order', order))
+  .catch((error) => console.error(error));
 ```
 
 ### Eine Order löschen
 
 > ```ts
-> async function deleteOrder(orderId: string): Promise<boolean>;
+> async function deleteOrder(orderId: string): Promise<Job>;
 > ```
 
 ```ts
-orderManager.deleteOrder('orderId');
+orderManager
+  .deleteOrder('orderId')
+  .then((job) => console.log('Job', job))
+  .catch((error) => console.error(error));
 ```
 
 ### Einen Job löschen
@@ -165,7 +171,7 @@ orderManager.deleteOrder('orderId');
 > ```
 
 ```ts
-orderManager.deleteJob('jobId');
+const deleted = await orderManager.deleteJob('jobId');
 ```
 
 ## Shares
