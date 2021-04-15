@@ -36,9 +36,9 @@ export class RequestManager {
     });
   }
 
-  public static _get(url: string): Promise<string> {
+  public static _get(url: string, token?: string): Promise<string> {
     return new Promise((resolve, reject) => {
-      fetch(backendUrl + url)
+      fetch(backendUrl + url, this.getOptions('GET', token))
         .then((res: Response) => resolve(res.text()))
         .catch(reject);
     });
